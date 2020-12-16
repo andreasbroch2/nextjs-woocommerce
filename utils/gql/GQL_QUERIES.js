@@ -3,8 +3,7 @@ import { gql } from '@apollo/client';
 export const GET_SINGLE_PRODUCT = gql`
   query Product($id: ID!) {
     product(id: $id, idType: DATABASE_ID) {
-      id 
-      databaseId     
+      id  
       averageRating
       slug
       description
@@ -23,20 +22,9 @@ export const GET_SINGLE_PRODUCT = gql`
       ... on VariableProduct {
         price
         id
-        paColors {
-          nodes {
-            name
-          }
-        }
-        paSizes {
-          nodes {
-            name
-          }
-        }
         variations {
           nodes {
             id
-            databaseId
             name
             stockStatus
             stockQuantity
@@ -105,7 +93,6 @@ export const FETCH_ALL_PRODUCTS_QUERY = gql`
     products(first: 24) {
       nodes {
         id
-        databaseId
         name
         onSale
         slug
@@ -150,7 +137,6 @@ export const GET_PRODUCTS_FROM_CATEGORY = gql`
       products(first: 50) {
         nodes {
           id
-          databaseId
           averageRating
           slug
           description
@@ -200,7 +186,6 @@ export const GET_CART = gql`
           key
           product {
             id
-            databaseId
             name
             description
             type
@@ -227,7 +212,6 @@ export const GET_CART = gql`
           }
           variation {
             id
-            databaseId
             name
             description
             type
@@ -259,7 +243,6 @@ export const GET_CART = gql`
       appliedCoupons {
         nodes {
           id
-          databaseId
           discountType
           amount
           dateExpiry

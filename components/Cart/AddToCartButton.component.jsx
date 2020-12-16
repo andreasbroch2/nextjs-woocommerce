@@ -23,7 +23,7 @@ const AddToCartButton = ({ product }) => {
   const [showViewCart, setShowViewCart] = useState(false);
   const [showAddToCart, setshowAddToCart] = useState(false);
 
-  const productId = product.databaseId ? product.databaseId : product;
+  const productId = product.id ? product.id : product;
 
   const productQueryInput = {
     clientMutationId: uuidv4(), // Generate a unique id.

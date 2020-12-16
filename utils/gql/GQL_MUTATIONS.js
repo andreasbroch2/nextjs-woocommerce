@@ -7,7 +7,7 @@ export const ADD_TO_CART = gql`
         key
         product {
           id
-          databaseId
+          
           name
           description
           type
@@ -30,7 +30,6 @@ export const ADD_TO_CART = gql`
         }
         variation {
           id
-          databaseId
           name
           description
           type
@@ -67,7 +66,7 @@ export const CHECKOUT_MUTATION = gql`
       clientMutationId
       order {
         id
-        databaseId
+        
         refunds {
           nodes {
             amount
@@ -88,7 +87,6 @@ export const UPDATE_CART = gql`
         key
         product {
           id
-          databaseId
           name
           description
           type
@@ -111,7 +109,7 @@ export const UPDATE_CART = gql`
         }
         variation {
           id
-          databaseId
+          
           name
           description
           type
@@ -142,22 +140,22 @@ export const UPDATE_CART = gql`
         key
         product {
           id
-          databaseId
+          
         }
         variation {
           id
-          databaseId
+          
         }
       }
       updated {
         key
         product {
           id
-          databaseId
+          
         }
         variation {
           id
-          databaseId
+          
         }
       }
     }
